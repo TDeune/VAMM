@@ -23,31 +23,3 @@ body{
 .form-control{
     background-color: transparent !important;
 }
-.cim{
-    color: #ff003f;
-    padding: 5px;
-    font-weight:bold;
-    letter-spacing: 2px;
-    text-align: center;
-    font-size: 100px;
-    margin-bottom: 0;
-}
-.cim2{
-
-
-    padding-bottom: 5px;
-    font-weight:bold;
-    letter-spacing: 2px;
-    text-align: center;
-    font-size: 20px;
-    margin-top: 10px;
-
-
-
-}
-.szoveg{
-    font-weight:bold;
-    text-align: center;
-    font-size: 20px;
-    margin-top: 90px;
-}
