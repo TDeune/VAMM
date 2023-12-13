@@ -1,5 +1,5 @@
 body{
-    background: linear-gradient(rgba(0,0,50,0.5),rgba(0,0,50,0.5)),url("letöltés.jpg");
+    background: linear-gradient(rgba(0,0,50,0.5),rgba(0,0,50,0.5)),url("hatter.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -22,4 +22,17 @@ body{
 
 .form-control{
     background-color: transparent !important;
+}
+
+.cim{
+    background-color: rgba(255, 0, 0, 0.58);
+    margin-top: 50px;
+    margin-left: 510px;
+    margin-right: 510px;
+    padding: 15px;
+}
+
+.kep{
+    background-position: right;
+    margin: 50px;
 }
