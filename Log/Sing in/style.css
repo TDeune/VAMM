@@ -26,13 +26,17 @@ body{
 
 .cim{
     background-color: rgba(255, 0, 0, 0.58);
-    margin-top: 50px;
-    margin-left: 510px;
-    margin-right: 510px;
+    text-align: center;
     padding: 15px;
+    font-size: 35px;
 }
 
 .kep{
-    background-position: right;
-    margin: 50px;
+    margin: 25px;
+}
+
+.aszov{
+    font-style: italic;
+    font-size: 25px;
+    margin: 25px;
 }
