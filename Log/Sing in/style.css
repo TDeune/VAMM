@@ -87,3 +87,6 @@ body{
     font-size: 25px;
     margin: 25px;
 }
+.kep5:hover, .kep5:focus {
+    background-color: #2980B9;
+}
