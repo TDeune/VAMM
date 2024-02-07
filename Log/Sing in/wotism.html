@@ -4,11 +4,47 @@
     <meta charset="UTF-8">
     <title>World of Tanks</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <h1 class="cim">Minden a World of Tanks - ről</h1>
+    <div class="contain">
+        <div class="image">
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn"><i class="fa fa-bars" style="font-size: xxx-large;"></i></button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="kezd.html">Home</a>
+                    <a href="up.html">About</a>
+                    <a href="up.html">Profile</a>
+                </div>
+            </div>
+        </div>
+        <div class="text">
+            <h1 class="cim">A World of Tanks - ről</h1>
+        </div>
+    </div>
     <img src="wotkep2.jpg" style="float:right;width: 400px;height: 300px" class="kep">
     <img src="wotkep1.jpg" style="float: left;width: 300px;height: 400px;" class="kep">
     <p class="aszov">A World of Tanks egy 3D-s csapatalapú többjátékos freemium videójáték, amelyben az 1910-es és 1970-es évek közötti páncélozott harcjárművek harcait szimulálják. A játék PvP alapú, vagyis a játékosok egymással harcolnak benne. A kiadott változatban 94 amerikai, 130 szovjet, 119 német, 78 brit, 75 francia, 42 kínai, 12 cseh, 29 svéd, 26 japán, 12 olasz harcjármű és 12 lengyel harcjármű, amelyeket könnyű, közepes és nehéz harckocsikra, páncélvadászokra és önjáró lövegekre osztottak fel. Összesen 500 tankot vehetünk az irányításunk alá. A járművek külsőre történelmileg hű másai a valódiaknak (habár vannak fantázia tankok amelyet kis valósággal ötvöztek), de mivel a játék nem egy tankszimulátor, így bizonyos értékeket (például a páncélátütés fizikája) egyszerűsítettek és a játékbeli irányítást kiegyenlítették.</p>
+    <script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
 </body>
 </html>

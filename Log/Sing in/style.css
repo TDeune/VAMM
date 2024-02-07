@@ -27,7 +27,6 @@ body{
 .cim{
     background-color: transparent;
     text-align: center;
-    padding: 15px;
     font-size: 50px;
 }
 .cim2{
@@ -40,11 +39,13 @@ body{
     margin: 25px;
 }
 .kep2{
-    margin: 50px;
+    margin: 90px;
+    margin-bottom: 10px;
 
 }
 .kep3{
     margin: 90px;
+    margin-bottom: 10px;
     width: 30%;
     height: 30%;
 }
@@ -53,7 +54,8 @@ body{
     height: 5%;
 }
 .kep4{
-    margin: 100px;
+    margin: 140px;
+    margin-bottom: 10px;
     width: 15%;
     height: 15%;
 }
@@ -86,6 +88,18 @@ body{
     font-style: italic;
     font-size: 25px;
     margin: 25px;
+}
+.dropbtn2 {
+    background-color: transparent;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn2:hover, .dropbtn2:focus {
+    background-color: #2980B9;
 }
 .dropbtn {
     background-color: transparent;
