@@ -25,7 +25,7 @@ body{
 }
 
 .cim{
-    background-color: rgba(255, 0, 0, 0.58);
+    background-color: transparent;
     text-align: center;
     padding: 15px;
     font-size: 50px;
@@ -88,7 +88,7 @@ body{
     margin: 25px;
 }
 .dropbtn {
-    background-color: rgba(255, 0, 0, 0.58);
+    background-color: transparent;
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -125,3 +125,11 @@ body{
 .dropdown a:hover {background-color: #ddd;}
 
 .show {display: block;}
+
+.contain {
+    background-color: rgba(255, 0, 0, 0.58);
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px;
+}
