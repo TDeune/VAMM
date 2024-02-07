@@ -43,6 +43,11 @@ body{
     margin-bottom: 10px;
 
 }
+.kep10{
+    width: 20%;
+    height: 20%;
+
+}
 .kep3{
     margin: 90px;
     margin-bottom: 10px;
@@ -69,6 +74,21 @@ body{
     margin-top: -30px;
     margin-left: 30px;
     color: blueviolet;
+}
+.szoveg5{
+    text-align: left;
+    font-size: 40px;
+    margin-top: 15px;
+    font-weight: bold;
+    margin-left: 30px;
+    color: black;
+}
+.szovegkis{
+    text-align: left;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-left: 20px;
+    color: black;
 }
 .szoveg3{
     text-align: center;
