@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Kezdőoldal</title>
     <link rel="icon" type="image/x-icon" href="diamonds-smile.png">
-    <script type="application/javascript" src="javacucc.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -46,19 +45,17 @@
         <div class="column"><a href="mcism.html">MINECRAFT</a></div>
     </div>
     <script>
-        /* When the user clicks on the button,
-        toggle between hiding and showing the dropdown content */
         function myFunction() {
             document.getElementById("myDropdown").classList.toggle("show");
         }
-
-        // Close the dropdown if the user clicks outside of it
         window.onclick = function(event) {
+            var dropdowns;
+            var i;
+            var openDropdown;
             if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
+                dropdowns = document.getElementsByClassName("dropdown-content");
                 for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
+                    openDropdown = dropdowns[i];
                     if (openDropdown.classList.contains('show')) {
                         openDropdown.classList.remove('show');
                     }

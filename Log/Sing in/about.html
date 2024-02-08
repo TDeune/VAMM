@@ -5,7 +5,6 @@
     <title>Rólunk</title>
     <link rel="icon" type="image/x-icon" href="diamonds-smile.png">
     <link rel="stylesheet" href="style.css">
-    <script type="application/javascript" src="javacucc.js"></script>
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -42,6 +41,24 @@
             <p  class="szovegkis2"  style="margin-left: auto;margin-right: auto"> "Turns out, codes do not get you hoes"</p>
         </div>
     </div>
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        window.onclick = function(event) {
+            var dropdowns;
+            var i;
+            var openDropdown;
+            if (!event.target.matches('.dropbtn')) {
+                dropdowns = document.getElementsByClassName("dropdown-content");
+                for (i = 0; i < dropdowns.length; i++) {
+                    openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
 </body>
-
 </html>
