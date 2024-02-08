@@ -5,36 +5,58 @@
     <title>Rólunk</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<div class="contain">
-    <div class="image">
-        <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn"><i class="fa fa-bars" style="font-size: xxx-large;"></i></button>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="kezd.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="up.html">Profile</a>
+    <div class="contain">
+        <div class="image">
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn"><i class="fa fa-bars" style="font-size: xxx-large;"></i></button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="kezd.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="up.html">Profile</a>
+                </div>
             </div>
         </div>
+        <div class="text">
+            <h1 class="cim">Rólunk</h1>
+        </div>
     </div>
-    <div class="text">
-        <h1 class="cim">Rólunk</h1>
+    <div  class ="row">
+        <img class="kep10" src="idiot1.jpg" alt="hulye1" title="hulye1" style="margin-left: auto;margin-right: auto">
+        <img class="kep10" src="idiot2.jpg" alt="hulye2" title="hulye2" style="margin-left: auto;margin-right: auto">
     </div>
-</div>
-<div  class ="row">
-    <img class="kep10" src="idiot1.jpg" alt="hulye1" title="hulye1" style="margin-left: auto;margin-right: auto">
-    <img class="kep10" src="idiot2.jpg" alt="hulye2" title="hulye2" style="margin-left: auto;margin-right: auto">
-</div>
-<div  class ="row">
-    <p class="szoveg5" style="margin-left: auto;margin-right: auto"> Munk Márk </p>
-    <p  class="szoveg5"  style="margin-left: auto;margin-right: auto"> Vanger Ákos</p>
-</div>
-<div  class ="row">
-    <p class="szovegkis" style="margin-left: auto;margin-right: auto"> "Az élet egy ringispil,mindig forgunk,
-        néha lovon,néha kocsin,néha magunktól." </p>
-    <p  class="szovegkis"  style="margin-left: auto;margin-right: auto"> "Vanger Ákos vagyok! Szia!"</p>
-</div>
+    <div  class ="row">
+        <p class="szoveg5" style="margin-left: auto;margin-right: auto"> Munk Márk </p>
+        <p  class="szoveg5"  style="margin-left: auto;margin-right: auto"> Vanger Ákos</p>
+    </div>
+    <div  class ="row">
+        <p class="szovegkis" style="margin-left: auto;margin-right: auto"> "Az élet egy ringispil,mindig forgunk,
+            néha lovon,néha kocsin,néha magunktól." </p>
+        <p  class="szovegkis"  style="margin-left: auto;margin-right: auto"> "Turns our, codes do not get you hoes"</p>
+    </div>
+    <script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
 </body>
 
 </html>

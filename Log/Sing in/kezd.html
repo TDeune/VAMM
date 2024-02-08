@@ -8,54 +8,54 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<div class="contain">
-    <div class="image">
-        <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn"><i class="fa fa-bars" style="font-size: xxx-large;"></i></button>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="kezd.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="up.html">Profile</a>
+    <div class="contain">
+        <div class="image">
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn"><i class="fa fa-bars" style="font-size: xxx-large;"></i></button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="kezd.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="up.html">Profile</a>
+                </div>
             </div>
         </div>
+        <div class="text">
+            <h1 class="cim"> YNTK </h1>
+        </div>
     </div>
-    <div class="text">
-        <h1 class="cim"> YNTK </h1>
+    <h2 class="cim2"> YOU NEED TO KNOW </h2>
+    <p class="szoveg"> A YNTK egy gyönyörü játékbemutató oldal mely által megismerhetsz számos hires és izgalmas játékot,ekszklúziv hireket,újdonságokat,és sok mást!   </p>
+    <div  class ="row">
+    <img class="kep2" src="lolicon.png" alt="League of Legends" title="League of Legends" style="width: 300px;height: 300px" style="margin-left: auto;margin-right: auto">
+    <img class="kep3" src="World-of-Tanks-emblem.png" alt="World of Tanks" title="World of Tanks" style="margin-left: auto;margin-right: auto">
+        <img class="kep4" src="avjal33hpqo61.png" alt="Minecraft" title="Minecraft" style="margin-left: auto;margin-right: auto">
     </div>
-</div>
-<h2 class="cim2"> YOU NEED TO KNOW </h2>
-<p class="szoveg"> A YNTK egy gyönyörü játékbemutató oldal mely által megismerhetsz számos hires és izgalmas játékot,ekszklúziv hireket,újdonságokat,és sok mást!   </p>
-<div  class ="row">
-<img class="kep2" src="lolicon.png" alt="League of Legends" title="League of Legends" style="width: 300px;height: 300px" style="margin-left: auto;margin-right: auto">
-<img class="kep3" src="World-of-Tanks-emblem.png" alt="World of Tanks" title="World of Tanks" style="margin-left: auto;margin-right: auto">
-    <img class="kep4" src="avjal33hpqo61.png" alt="Minecraft" title="Minecraft" style="margin-left: auto;margin-right: auto">
-</div>
-<div  class ="row">
-<p class="szoveg2" style="margin-left: auto;margin-right: auto"> <a href="lolism.html">LEAGUE OF LEGENDS</a> </p>
-<p  class="szoveg3"  style="margin-left: auto;margin-right: auto"> <a href="wotism.html">WORLD OF TANKS</a></p>
-<p class="szoveg4" style="margin-left: auto;margin-right: auto"> <a href="mcism.html">MINECRAFT </a></p>
-</div>
+    <div  class ="row">
+    <p class="szoveg2" style="margin-left: auto;margin-right: auto"> <a href="lolism.html">LEAGUE OF LEGENDS</a> </p>
+    <p  class="szoveg3"  style="margin-left: auto;margin-right: auto"> <a href="wotism.html">WORLD OF TANKS</a></p>
+    <p class="szoveg4" style="margin-left: auto;margin-right: auto"> <a href="mcism.html">MINECRAFT </a></p>
+    </div>
 
-<script>
-    /* When the user clicks on the button,
-    toggle between hiding and showing the dropdown content */
-    function myFunction() {
-        document.getElementById("myDropdown").classList.toggle("show");
-    }
+    <script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
 
-    // Close the dropdown if the user clicks outside of it
-    window.onclick = function(event) {
-        if (!event.target.matches('.dropbtn')) {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            var i;
-            for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
                 }
             }
         }
-    }
-</script>
+    </script>
 </body>
 </html>
