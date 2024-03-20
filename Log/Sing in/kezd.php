@@ -16,7 +16,7 @@
             <div class="dropdown">
                 <button onclick="myFunction()" class="dropbtn"><i class="fa fa-bars" style="font-size: xxx-large;"></i></button>
                 <div id="myDropdown" class="dropdown-content">
-                    <a href="kezd.html">Home</a>
+                    <a href="kezd.php">Home</a>
                     <a href="about.html">About</a>
                     <a href="up.html">Profile</a>
                 </div>
@@ -44,6 +44,21 @@
         <div class="column"><a href="wotism.html">WORLD OF TANKS</a></div>
         <div class="column"><a href="mcism.html">MINECRAFT</a></div>
     </div>
+
+    <h2>Leave a Comment</h2>
+    <form action="submit_comment.php" method="post">
+        <label for="comment">Comment:</label><br>
+        <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <hr>
+
+    <h2>Comments</h2>
+    <div id="comments">
+        <?php include 'load_comments.php'; ?>
+    </div>
+
     <script>
         function myFunction() {
             document.getElementById("myDropdown").classList.toggle("show");
@@ -62,6 +77,7 @@
                 }
             }
         }
+
     </script>
 </body>
 </html>
