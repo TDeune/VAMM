@@ -10,8 +10,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST["email"];
-    $felh = $_POST["felh"];
+    $email = $_POST["felh"];
+    $felh = $_POST["email"];
     $elet = $_POST["psw"];
     $telf = $_POST["telf"];
     $nem = $_POST["nem"];

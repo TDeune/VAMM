@@ -43,7 +43,7 @@
 
         <p>Azzal hogy készítesz egy felhasználói profilt beleegyezel a <a href="#">Terms & Privacy</a>-ba.</p>
 
-        <button type="submit" class="registerbtn">Regisztrálás</button>
+        <a href="kezd.php" type="submit" class="registerbtn" onclick="f()">Regisztrálás</button></a>
         <div id="comments">
             <?php include 'ppl.php'; ?>
         </div>
@@ -53,8 +53,12 @@
     const felha = localStorage.getItem('felh');
     const pass = localStorage.getItem('pass');
 
+
     document.getElementById('felh').value = felha;
     document.getElementById('pass').value = pass;
+    function f(){
+        localStorage.setItem('loggedin', '1');
+    }
 </script>
 </body>
 </html>
