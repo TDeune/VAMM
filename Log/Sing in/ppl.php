@@ -1,27 +1,25 @@
 <?php
-    /*$db = mysqli_connect("localhost", "root", "", "dnevnik");
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "users";
 
-    if (mysqli_connect_errno()) {
-        die("HIBA az adatbázishoz való kapcsolódás során: " . mysqli_connect_error());
-    }
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-    $name = isset($_GET["name"]) ? $_GET["name"] : "";
-    $sql = "SELECT kereszt, vezetek FROM ucenik " .
-        "WHERE (vezetek LIKE CONCAT(?, '%') OR kereszt LIKE CONCAT(?, '%')) LIMIT 10";
-    $stmt = mysqli_prepare($db, $sql);
-    if (!$stmt)
-        die(mysqli_error($db));
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST["felh"];
+    $felh = $_POST["email"];
+    $elet = $_POST["psw"];
+    $telf = $_POST["telf"];
+    $nem = $_POST["nem"];
+    $pass = $_POST["pass"];
+    $sql = "INSERT INTO user (email, felhnev, jelszo, eletkor, nem, telefonsz) VALUES ('$email', '$felh', '$pass', '$elet', '$nem', '$telf')";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+}
 
-    $stmt->bind_param("ss", $name,$name);
-
-    mysqli_stmt_execute($stmt);
-    if (mysqli_stmt_error($stmt))
-        die(mysqli_stmt_error($stmt));
-
-    $result = mysqli_stmt_get_result($stmt);
-    $ucenici = array();
-    while ($row = mysqli_fetch_assoc($result))
-        array_push($ucenici, $row);
-    echo json_encode($ucenici);
-    $stmt->close();*/
+$conn->close();
 ?>

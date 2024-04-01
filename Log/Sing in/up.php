@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="hu-HU">
 <head>
@@ -25,35 +28,57 @@
             <form action="validation.php" method="post">
                 <div class="form-group">
                     <label>Felhasználónév</label>
-                    <input type="text" name="user" class="form-control" required>
+                    <input type="text" id="uaser" name="user" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label>Jelszó</label>
                     <input type="password" name="password" class="form-control" required>
                 </div>
                 <br>
-                <a href="kezd.php" type="submit" class="btn btn-primary"> Login </a>
+                <input type="submit" value="login">
+                <br>
+                <?php
+                    if (isset($_SESSION['error'])){
+                        echo $_SESSION['error'];
+                        unset($_SESSION['error']);
+                    }
+                ?>
             </form>
         </div>
         <div class="col-md-6 login-right">
             <h2>Register here</h2>
-            <form action="registration.php" method="post">
+            <form>
                 <div class="form-group">
                     <label>Felhasználónév</label>
-                    <input type="text" name="user" class="form-control" required>
+                    <input type="text" id="user" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label>Jelszó</label>
-                    <input type="password" name="password" class="form-control" required>
+                    <input type="password" id="password" class="form-control" required>
                 </div>
                 <br>
-                <a href="kezd.php" type="submit" class="btn btn-primary"> Register </a>
+                <a href="regi.php" type="submit" class="btn btn-primary"> Register </a>
             </form>
         </div>
         </div>
         </div>
     </div>
     <script>
+        function update() {
+            const vserr1 = document.getElementById('uaser').value;
+            const vserr = document.getElementById('user').value;
+            if(vserr1 !== ''){
+                localStorage.removeItem('loggedin');
+                localStorage.setItem('loggedin','1');
+            }
+            if(vserr !== ''){
+                localStorage.removeItem('loggedin');
+                localStorage.setItem('loggedin','1');
+            }
+            const passw = document.getElementById('password').value;
+            localStorage.setItem('felh', vserr+vserr1);
+            localStorage.setItem('pass', passw);
+        }
         function myFunction() {
             document.getElementById("myDropdown").classList.toggle("show");
         }
@@ -70,6 +95,11 @@
                     }
                 }
             }
+        }
+        setInterval("update()",1000);
+        function f(){
+            console.log("ANYAD");
+            localStorage.setItem('loggedin', '1');
         }
     </script>
 </body>

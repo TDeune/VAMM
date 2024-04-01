@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(isset($_SESSION['username'])){
+    $profillink="profil.php";
+}else{
+    $profillink="up.php";
+}
+?>
 <!DOCTYPE html>
 <html lang="hu-HU">
 <head>
@@ -18,7 +26,7 @@
                 <div id="myDropdown" class="dropdown-content">
                     <a href="kezd.php">Home</a>
                     <a href="about.html">About</a>
-                    <a href="up.html">Profile</a>
+                    <a id="bej" href="<?php echo $profillink;?>">Profile</a>
                 </div>
             </div>
         </div>
@@ -47,6 +55,7 @@
 
     <h2>Leave a Comment</h2>
     <form action="submit_comment.php" method="post">
+
         <label for="comment">Comment:</label><br>
         <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br><br>
         <input type="submit" value="Submit">
@@ -60,6 +69,10 @@
     </div>
 
     <script>
+        /*function f1() {
+            localStorage.setItem('loggedin', '0')
+        }*/
+
         function myFunction() {
             document.getElementById("myDropdown").classList.toggle("show");
         }
@@ -77,6 +90,7 @@
                 }
             }
         }
+        setInterval("update()",1000);
 
     </script>
 </body>
