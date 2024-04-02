@@ -1,4 +1,8 @@
 <?php
+session_start();
+if (isset($_SESSION['username'])) {
+
+    $szekcio = $_SESSION['szekcio'];
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -17,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $comment = $_POST["comment"];
 
     // Prepare SQL statement to insert comment into database
-    $sql = "INSERT INTO comments (email, comment) VALUES ('$email', '$comment')";
+    $sql = "INSERT INTO comments (email, comment, szekcio) VALUES ('$email', '$comment', '$szekcio')";
 
     if ($conn->query($sql) === TRUE) {
         // Redirect back to the index page
@@ -29,4 +33,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 $conn->close();
+}else{
+    session_destroy();
+    header('Location: up.php');
+}
 ?>

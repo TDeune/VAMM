@@ -22,6 +22,9 @@ if (isset($_POST['user']) && isset($_POST['password']))
         $userdata=mysqli_fetch_array($result);
         $_SESSION['username']=$username;
         $_SESSION['email']=$userdata['email'];
+        $_SESSION['teljesnev']=$userdata['teljesnev'];
+        $_SESSION['lakcim']=$userdata['lakcim'];
+
         header('Location: kezd.php');
         exit();
     }else {

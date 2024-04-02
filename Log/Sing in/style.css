@@ -7,7 +7,8 @@ body{
 .login-box{
     max-width: 700px;
     float: none;
-    margin: 170px auto;
+    margin-top: 40px;
+    margin-left: 180px ;
 }
 
 .login-left{
@@ -31,8 +32,8 @@ body{
 }
 .cim2{
     text-align: center;
-    padding: 15px;
-    margin: -10px;
+    padding: 5px;
+    margin: 10px;
     font-size: 25px;
 }
 .kep{

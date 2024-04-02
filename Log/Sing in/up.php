@@ -12,12 +12,14 @@ session_start();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn2"><i class="fa fa-bars" style="font-size: xxx-large;" ></i></button>
-        <div id="myDropdown" class="dropdown-content">
-            <a href="kezd.php">Home</a>
-            <a href="about.html">About</a>
-            <a href="up.html">Profile</a>
+    <div class="image">
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn"><i class="fa fa-bars" style="font-size: xxx-large;" ></i></button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="kezd.php">Home</a>
+                <a href="about.html">About</a>
+                <a href="up.html">Profile</a>
+            </div>
         </div>
     </div>
     <div class="container">

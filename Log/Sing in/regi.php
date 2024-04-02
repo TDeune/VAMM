@@ -44,9 +44,6 @@
         <p>Azzal hogy készítesz egy felhasználói profilt beleegyezel a <a href="#">Terms & Privacy</a>-ba.</p>
 
         <a href="kezd.php" type="submit" class="registerbtn" onclick="f()">Regisztrálás</button></a>
-        <div id="comments">
-            <?php include 'ppl.php'; ?>
-        </div>
     </div>
 </form>
 <script>
