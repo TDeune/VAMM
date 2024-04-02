@@ -1,5 +1,6 @@
 <?php
 session_start();
+$_SESSION['szekcio']="fooldal";
 if(isset($_SESSION['username'])){
     $profillink="profil.php";
 }else{
@@ -50,10 +51,15 @@ if(isset($_SESSION['username'])){
     <div class="row1">
         <div class="column"><a href="lolism.html">LEAGUE OF LEGENDS</a></div>
         <div class="column"><a href="wotism.html">WORLD OF TANKS</a></div>
-        <div class="column"><a href="mcism.html">MINECRAFT</a></div>
+        <div class="column"><a href="mcism.php">MINECRAFT</a></div>
     </div>
 
     <h2>Leave a Comment</h2>
+    <?php
+    if (isset($_SESSION['username'])){
+
+
+    ?>
     <form action="submit_comment.php" method="post">
 
         <label for="comment">Comment:</label><br>
@@ -67,7 +73,12 @@ if(isset($_SESSION['username'])){
     <div id="comments">
         <?php include 'load_comments.php'; ?>
     </div>
-
+    <?php
+    }else{
+        echo "<br>";
+        echo "a komment szekciot csak bejelentkezessel lehet elerni!";
+    }
+    ?>
     <script>
         /*function f1() {
             localStorage.setItem('loggedin', '0')
