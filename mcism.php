@@ -42,7 +42,11 @@ if(isset($_SESSION['username'])){
 
 
         ?>
+<<<<<<<< HEAD:mcism.php
         <form action="eszkozok/submit_comment.php" method="post">
+========
+        <form action="submit_comment.php" method="post">
+>>>>>>>> origin/main:kepek/mcism.php
 
             <label for="comment">Comment:</label><br>
             <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br><br>
@@ -53,7 +57,11 @@ if(isset($_SESSION['username'])){
 
         <h2>Comments</h2>
         <div id="comments">
+<<<<<<<< HEAD:mcism.php
             <?php include 'eszkozok/load_comments.php'; ?>
+========
+            <?php include 'load_comments.php'; ?>
+>>>>>>>> origin/main:kepek/mcism.php
         </div>
         <?php
     }else{

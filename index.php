@@ -1,6 +1,5 @@
 <?php
 session_start();
-$_SESSION['szekcio']="fooldal";
 if(isset($_SESSION['username'])){
     $profillink="profil.php";
 }else{
@@ -12,9 +11,9 @@ if(isset($_SESSION['username'])){
 <head>
     <meta charset="UTF-8">
     <title>Kezdőoldal</title>
-    <link rel="icon" type="image/x-icon" href="kepek/diamonds-smile.png">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" type="image/x-icon" href="diamonds-smile.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,7 +24,7 @@ if(isset($_SESSION['username'])){
             <div class="dropdown">
                 <button onclick="myFunction()" class="dropbtn"><i class="fa fa-bars" style="font-size: xxx-large;"></i></button>
                 <div id="myDropdown" class="dropdown-content">
-                    <a href="index.php">Home</a>
+                    <a href="kezd.php">Home</a>
                     <a href="about.html">About</a>
                     <a id="bej" href="<?php echo $profillink;?>">Profile</a>
                 </div>
@@ -39,24 +38,35 @@ if(isset($_SESSION['username'])){
     <p class="szoveg"> A YNTK egy gyönyörü játékbemutató oldal mely által megismerhetsz számos hires és izgalmas játékot,ekszklúziv hireket,újdonságokat,és sok mást!   </p>
     <div  class ="row1">
         <div class="column">
-            <img src="kepek/lolicon.png" alt="League of Legends" title="League of Legends" style="width: 300px;height: 300px">
+            <img src="lolicon.png" alt="League of Legends" title="League of Legends" style="width: 300px;height: 300px">
         </div>
         <div class="column">
-            <img src="kepek/World-of-Tanks-emblem.png" alt="World of Tanks" title="World of Tanks" style="width: 450px;height: 300px">
+            <img src="World-of-Tanks-emblem.png" alt="World of Tanks" title="World of Tanks" style="width: 450px;height: 300px">
         </div>
         <div class="column">
-            <img src="kepek/avjal33hpqo61.png" alt="Minecraft" title="Minecraft" style="width: 260px;height: 260px">
+            <img src="avjal33hpqo61.png" alt="Minecraft" title="Minecraft" style="width: 260px;height: 260px">
         </div>
     </div>
     <div class="row1">
-        <div class="column"><a href="lolism.php">LEAGUE OF LEGENDS</a></div>
-        <div class="column"><a href="wotism.php">WORLD OF TANKS</a></div>
-        <div class="column"><a href="mcism.php">MINECRAFT</a></div>
+        <div class="column"><a href="lolism.html">LEAGUE OF LEGENDS</a></div>
+        <div class="column"><a href="wotism.html">WORLD OF TANKS</a></div>
+        <div class="column"><a href="mcism.html">MINECRAFT</a></div>
     </div>
 
+    <h2>Leave a Comment</h2>
+    <form action="submit_comment.php" method="post">
+
+        <label for="comment">Comment:</label><br>
+        <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
 
     <hr>
 
+    <h2>Comments</h2>
+    <div id="comments">
+        <?php include 'load_comments.php'; ?>
+    </div>
 
     <script>
         /*function f1() {
@@ -80,6 +90,7 @@ if(isset($_SESSION['username'])){
                 }
             }
         }
+        setInterval("update()",1000);
 
     </script>
 </body>
