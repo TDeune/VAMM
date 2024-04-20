@@ -18,13 +18,13 @@ if (isset($_SESSION['username'])) {
     }
 
 // Retrieve comments from database
-    $sql = "SELECT email, comment, created_at FROM comments WHERE szekcio='" . $szekcio . "' ORDER BY created_at DESC";
+    $sql = "SELECT username, comment, created_at FROM comments WHERE szekcio='" . $szekcio . "' ORDER BY created_at DESC";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        // Output data of each row
-        while ($row = $result->fetch_assoc()) {
-            echo "<p><strong>Username:</strong> " . $row["email"] . "<br><strong>Comment:</strong> " . $row["comment"] . "<br><strong>Date:</strong> " . $row["created_at"] . "</p>";
+
+    while ($row = $result->fetch_assoc()) {
+            echo "<div class='comment'><strong>Username:</strong> " . $row["username"] . "<br><strong>Comment:</strong> " . $row["comment"] . "<br><strong>Date:</strong> " . $row["created_at"] . "</div>";
         }
     } else {
         echo "No comments yet.";
@@ -33,6 +33,6 @@ if (isset($_SESSION['username'])) {
     $conn->close();
 }else{
     session_destroy();
-    header('Location: up.php');
+    header('Location: ../up.php');
 }
 ?>

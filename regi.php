@@ -5,7 +5,7 @@
     <title>Registration</title>
 </head>
 <body>
-<form action="ppl.php" method="post">
+<form action="eszkozok/ppl.php" method="post">
     <div class="container">
         <h1>Regisztrálás</h1>
         <p>Kérem töltse ki ezt az adatlapot.</p>
@@ -43,7 +43,7 @@
 
         <p>Azzal hogy készítesz egy felhasználói profilt beleegyezel a <a href="#">Terms & Privacy</a>-ba.</p>
 
-        <a href="kezd.php" type="submit" class="registerbtn" onclick="f()">Regisztrálás</button></a>
+        <a href="index.php" type="submit" class="registerbtn" onclick="f()">Regisztrálás</button></a>
     </div>
 </form>
 <script>

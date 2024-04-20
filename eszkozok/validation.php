@@ -25,17 +25,17 @@ if (isset($_POST['user']) && isset($_POST['password']))
         $_SESSION['teljesnev']=$userdata['teljesnev'];
         $_SESSION['lakcim']=$userdata['lakcim'];
 
-        header('Location: kezd.php');
+        header('Location: ../index.php');
         exit();
     }else {
 
         $_SESSION['error']="hibas felhasznalo nev vagy jelszo";
-        header('Location: up.php');
+        header('Location: ../up.php');
         exit();
     }
 }else
 {
-    header('Location: up.php');
+    header('Location: ../up.php');
     exit();
 }
 $conn->close();

@@ -6,7 +6,7 @@
 <body>
 
 <h2>Leave a Comment</h2>
-<form action="submit_comment.php" method="post">
+<form action="eszkozok/submit_comment.php" method="post">
     <label for="email">Email:</label><br>
     <input type="email" id="email" name="email"><br>
     <label for="comment">Comment:</label><br>

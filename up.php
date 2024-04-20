@@ -6,8 +6,8 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <title>Bejelentkezés</title>
-    <link rel="icon" type="image/x-icon" href="diamonds-smile.png">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/x-icon" href="kepek/diamonds-smile.png">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -16,7 +16,7 @@ session_start();
         <div class="dropdown">
             <button onclick="myFunction()" class="dropbtn"><i class="fa fa-bars" style="font-size: xxx-large;" ></i></button>
             <div id="myDropdown" class="dropdown-content">
-                <a href="kezd.php">Home</a>
+                <a href="index.php">Home</a>
                 <a href="about.html">About</a>
                 <a href="up.html">Profile</a>
             </div>
@@ -27,7 +27,7 @@ session_start();
         <div class="row">
         <div class="col-md-6 login-left">
             <h2>Login here</h2>
-            <form action="validation.php" method="post">
+            <form action="eszkozok/validation.php" method="post">
                 <div class="form-group">
                     <label>Felhasználónév</label>
                     <input type="text" id="uaser" name="user" class="form-control" required>
@@ -97,11 +97,6 @@ session_start();
                     }
                 }
             }
-        }
-        setInterval("update()",1000);
-        function f(){
-            console.log("ANYAD");
-            localStorage.setItem('loggedin', '1');
         }
     </script>
 </body>

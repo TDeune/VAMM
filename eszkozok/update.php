@@ -27,17 +27,17 @@ if (isset($_SESSION['username'])) {
             $_SESSION['teljesnev'] = $teljesnev;
             $_SESSION['lakcim'] = $lakcim;
 
-            header('Location: profil.php');
+            header('Location: ../profil.php');
             exit();
         } else {
 
             $_SESSION['error'] = "problema a felhasznalonevvel(nem egyedi vagy nem letezik)";
-            header('Location: up.php');
+            header('Location: ../up.php');
             exit();
         }
     } else {
         $_SESSION['error'] = "minden mezot toltsd ki!";
-        header('Location: profil.php');
+        header('Location: ../profil.php');
         exit();
     }
     $conn->close();
@@ -46,7 +46,7 @@ if (isset($_SESSION['username'])) {
     unset($_SESSION['email']);
     unset($_SESSION['teljesnev']);
     unset($_SESSION['lakcim']);
-    header('Location: up.php');
+    header('Location: ../up.php');
 }
 
 ?>

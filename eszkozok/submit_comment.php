@@ -17,15 +17,15 @@ if ($conn->connect_error) {
 // Check if form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve email and comment from form
-    $email = $_POST["email"];
+    $username = $_SESSION["username"];
     $comment = $_POST["comment"];
 
     // Prepare SQL statement to insert comment into database
-    $sql = "INSERT INTO comments (email, comment, szekcio) VALUES ('$email', '$comment', '$szekcio')";
+    $sql = "INSERT INTO comments (username, comment, szekcio) VALUES ('$username', '$comment', '$szekcio')";
 
     if ($conn->query($sql) === TRUE) {
         // Redirect back to the index page
-        header("Location: kezd.php");
+        header("Location: ../index.php");
         exit();
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
@@ -35,6 +35,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $conn->close();
 }else{
     session_destroy();
-    header('Location: up.php');
+    header('Location: ../up.php');
 }
 ?>

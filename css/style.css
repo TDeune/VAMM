@@ -1,5 +1,5 @@
 body{
-    background: linear-gradient(rgba(0,0,50,0.5),rgba(0,0,50,0.5)),url("hatter.jpg");
+    background: linear-gradient(rgba(0,0,50,0.5),rgba(0,0,50,0.5)),url("../kepek/hatter.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -229,4 +229,28 @@ a {
 .signin {
     background-color: #f1f1f1;
     text-align: center;
+}
+.comment_section{
+    width: 80%;
+    margin: auto;
+
+}
+#comments{
+    width: 100%;
+    margin-left: 20px;
+}
+
+
+.sumbit_comment_block{
+    width: 100%;
+    margin-left: 20px;
+    padding: 10px;
+    border:1px solid #4e555b;
+}
+.comment{
+    width: 90%;
+    border:1px solid #4e555b;
+    padding: 20px;
+    margin:10px;
+
 }
