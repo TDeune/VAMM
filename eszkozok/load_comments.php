@@ -33,6 +33,6 @@ if (isset($_SESSION['username'])) {
     $conn->close();
 }else{
     session_destroy();
-    header('Location: ../up.php');
+    header('Location: up.php');
 }
 ?>

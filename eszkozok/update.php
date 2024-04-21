@@ -15,28 +15,30 @@ if (isset($_SESSION['username'])) {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    if (isset($_POST['teljesnev']) && isset($_POST['lakcim'])) {
+    if (isset($_POST['teljesnev']) && isset($_POST['lakcim']) && isset($_POST['email']) && $_POST['email']!="" && $_POST['teljesnev']!="" && $_POST['lakcim']!="") {
         $teljesnev = $_POST['teljesnev'];
         $lakcim = $_POST['lakcim'];
+        $email = $_POST['email'];
         $username=$_SESSION['username'];
         $sql = "SELECT * FROM `users` WHERE `username`='" . $username . "'";
         $result = mysqli_query($conn, $sql);
         if (mysqli_num_rows($result) == 1) {
-            $sql="UPDATE `users` SET `teljesnev`='".$teljesnev."', `lakcim`='".$lakcim."'  WHERE `username`='" . $username . "'";
+            $sql="UPDATE `users` SET `teljesnev`='".$teljesnev."', `lakcim`='".$lakcim."',`email`='".$email."'  WHERE `username`='" . $username . "'";
 
             $_SESSION['teljesnev'] = $teljesnev;
             $_SESSION['lakcim'] = $lakcim;
-
+            $_SESSION['email'] = $email;
+            $_SESSION['update_error']="az adatokat sikeresen mentettuk";
             header('Location: ../profil.php');
             exit();
         } else {
 
-            $_SESSION['error'] = "problema a felhasznalonevvel(nem egyedi vagy nem letezik)";
+            $_SESSION['update_error'] = "problema a felhasznalonevvel(nem egyedi vagy nem letezik)";
             header('Location: ../up.php');
             exit();
         }
     } else {
-        $_SESSION['error'] = "minden mezot toltsd ki!";
+        $_SESSION['update_error'] = "minden mezot toltsd ki!";
         header('Location: ../profil.php');
         exit();
     }

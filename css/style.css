@@ -4,6 +4,18 @@ body{
     background-position: center;
 }
 
+h2{
+    margin-top: 25px;
+    margin-bottom: 10px;
+
+}
+.content_profil{
+    padding:20px;
+    margin-left: 30px;
+}
+
+
+
 .login-box{
     max-width: 700px;
     float: none;
@@ -230,27 +242,108 @@ a {
     background-color: #f1f1f1;
     text-align: center;
 }
-.comment_section{
-    width: 80%;
+.content_section{
+    width: 90%;
     margin: auto;
+    height: fit-content;
 
 }
-#comments{
+.content_image{
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+
+}
+.content_leftimage{
+    float: left;
+}
+.content_rightimage{
+    float: right;
+}
+
+
+.content_text{
+    float: left;
+    width: 950px;
+}
+.content_text_full{
+    float: left;
+    width: 80%;
+}
+
+
+.content_text_center{
+    width: 800px;
+    font-style: italic;
+    font-size: 25px;
+    margin: auto;
+    margin-top: 25px;
+
+}
+
+.content_text_full{
+    width: 100%;
+    font-style: italic;
+    font-size: 25px;
+    margin: auto;
+    margin-top: 25px;
+
+}
+
+
+
+
+.comment_section{
+    width: 100%;
+    margin-left: 0px;
+    float: left;
+
+}
+.comment_section_center{
+    width: 80%;
+    margin: auto;
+}
+
+.comments{
     width: 100%;
     margin-left: 20px;
 }
 
 
 .sumbit_comment_block{
-    width: 100%;
-    margin-left: 20px;
-    padding: 10px;
+    width: 90%;
+    padding: 20px;
+    margin:10px;
     border:1px solid #4e555b;
+    background-color: rgba(255,255,255,0.2);
 }
 .comment{
     width: 90%;
     border:1px solid #4e555b;
     padding: 20px;
     margin:10px;
+    background-color: rgba(255,255,255,0.2);
 
+}
+
+#comment{
+    width: 90%;
+    border:1px solid #4e555b;
+    padding: 20px;
+    height: 300px;
+    margin:10px;
+
+}
+.form_input_text_short{
+    width:300px !important;
+    padding: 5px;
+
+
+}
+.form_label{
+    font-weight: bold;
 }

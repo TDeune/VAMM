@@ -1,11 +1,19 @@
+<?php
+session_start();
+if(isset($_SESSION['username'])){
+    $profillink="profil.php";
+}else{
+    $profillink="up.php";
+}
+?>
 <!DOCTYPE html>
 <html lang="hu-HU">
 <head>
     <meta charset="UTF-8">
     <title>Rólunk</title>
     <link rel="icon" type="image/x-icon" href="diamonds-smile.png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -14,8 +22,8 @@
             <div class="dropdown">
                 <button onclick="myFunction()" class="dropbtn"><i class="fa fa-bars" style="font-size: xxx-large;"></i></button>
                 <div id="myDropdown" class="dropdown-content">
-                    <a href="kezd.php">Home</a>
-                    <a href="about.html">About</a>
+                    <a href="index.php">Home</a>
+                    <a href="about.php">About</a>
                     <a href="up.php">Profile</a>
                 </div>
             </div>
@@ -25,8 +33,8 @@
         </div>
     </div>
     <div  class ="row">
-        <img class="kep10" src="idiot1.jpg" alt="hulye1" title="hulye1" style="margin-left: auto;margin-right: auto;border-radius: 50%">
-        <img class="kep10" src="idiot2.jpg" alt="hulye2" title="hulye2" style="margin-left: auto;margin-right: auto;border-radius: 50%">
+        <img class="kep10" src="kepek/idiot1.jpg" alt="hulye1" title="hulye1" style="margin-left: auto;margin-right: auto;border-radius: 50%">
+        <img class="kep10" src="kepek/idiot2.jpg" alt="hulye2" title="hulye2" style="margin-left: auto;margin-right: auto;border-radius: 50%">
     </div>
     <div  class ="row">
         <p class="szoveg5" style="margin-left: auto;margin-right: auto"> Munk Márk </p>

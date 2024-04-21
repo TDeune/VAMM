@@ -17,7 +17,7 @@ session_start();
             <button onclick="myFunction()" class="dropbtn"><i class="fa fa-bars" style="font-size: xxx-large;" ></i></button>
             <div id="myDropdown" class="dropdown-content">
                 <a href="index.php">Home</a>
-                <a href="about.html">About</a>
+                <a href="about.php">About</a>
                 <a href="up.html">Profile</a>
             </div>
         </div>
@@ -37,7 +37,7 @@ session_start();
                     <input type="password" name="password" class="form-control" required>
                 </div>
                 <br>
-                <input type="submit" value="login">
+                <input type="submit" class="btn btn-primary" value="login">
                 <br>
                 <?php
                     if (isset($_SESSION['error'])){
@@ -49,17 +49,24 @@ session_start();
         </div>
         <div class="col-md-6 login-right">
             <h2>Register here</h2>
-            <form>
+            <form action="eszkozok/register.php" method="post">
                 <div class="form-group">
                     <label>Felhasználónév</label>
-                    <input type="text" id="user" class="form-control" required>
+                    <input type="text" id="user" name="user" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label>Jelszó</label>
-                    <input type="password" id="password" class="form-control" required>
+                    <input type="password" id="password" name="password" class="form-control" required>
                 </div>
                 <br>
-                <a href="regi.php" type="submit" class="btn btn-primary"> Register </a>
+                <input type="submit" class="btn btn-primary" value="register">
+                <br>
+                <?php
+                if (isset($_SESSION['register_error'])){
+                    echo $_SESSION['register_error'];
+                    unset($_SESSION['register_error']);
+                }
+                ?>
             </form>
         </div>
         </div>
