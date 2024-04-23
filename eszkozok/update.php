@@ -23,8 +23,8 @@ if (isset($_SESSION['username'])) {
         $sql = "SELECT * FROM `users` WHERE `username`='" . $username . "'";
         $result = mysqli_query($conn, $sql);
         if (mysqli_num_rows($result) == 1) {
-            $sql="UPDATE `users` SET `teljesnev`='".$teljesnev."', `lakcim`='".$lakcim."',`email`='".$email."'  WHERE `username`='" . $username . "'";
-
+            $sql1="UPDATE `users` SET `teljesnev`='".$teljesnev."', `lakcim`='".$lakcim."',`email`='".$email."'  WHERE `username`='" . $username . "'";
+            $query = mysqli_query($conn, $sql1);
             $_SESSION['teljesnev'] = $teljesnev;
             $_SESSION['lakcim'] = $lakcim;
             $_SESSION['email'] = $email;

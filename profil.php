@@ -6,7 +6,7 @@ if (isset($_SESSION['username'])) {
     <html lang="hu-HU">
     <head>
         <meta charset="UTF-8">
-        <title>Rólunk</title>
+        <title>Profil</title>
         <link rel="icon" type="image/x-icon" href="diamonds-smile.png">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -25,12 +25,12 @@ if (isset($_SESSION['username'])) {
         </div>
     </div>
     <div class="text">
-        <h1 class="cim">A Leauge of Legends - ről</h1>
+        <h1 class="cim">Profil</h1>
     </div>
 </div>
 <div class="content_profil">
 <h1>
-    Profil
+    Az adataid:
 </h1>
 <?php
 // Establish connection to MySQL database
@@ -45,15 +45,14 @@ if (isset($_SESSION['username'])) {
         die("Connection failed: " . $conn->connect_error);
     }
             echo "felhasznalonev: ".$_SESSION['username'];
-            echo "<br>";
-            echo "email: ".$_SESSION['email'];
+
             echo "<br>";
             echo "<form action='eszkozok/update.php' method='post'>";
-            echo "<p class='form_label'>teljes nev:</p><input type='text' class='form_input_text_short' name='teljesnev' value='".$_SESSION['teljesnev']."'>";
+            echo "<p class='form_label'>teljes nev:</p><input type='text' class='form_input_text_short' name='teljesnev' id='teljesnev' value='".$_SESSION['teljesnev']."'>";
             echo "<br>";
-            echo "<p class='form_label'>lakcim:</p><input type='text' name='lakcim' class='form_input_text_short' value='".$_SESSION['lakcim']."'>";
+            echo "<p class='form_label'>lakcim:</p><input type='text' name='lakcim' id='lakcim' class='form_input_text_short' value='".$_SESSION['lakcim']."'>";
             echo "<br>";
-            echo "<p class='form_label'>email:</p><input type='text' name='email' class='form_input_text_short' value='".$_SESSION['email']."'>";
+            echo "<p class='form_label'>email:</p><input type='text' name='email' id='email' class='form_input_text_short' value='".$_SESSION['email']."'>";
             echo "<br>";
             echo "<input type='submit'  class='btn btn-primary' value='adatok mentese'>";
             echo "<br>";

@@ -16,10 +16,10 @@ if (isset($_POST['user']) && isset($_POST['password']))
 {
     $username=$_POST['user'];
     $password=$_POST['password'];
-    $sql="SELECT * FROM `users` WHERE `username`='".$username."'";
+    $sql="SELECT * FROM  `users`  WHERE  `username` ='".$username."'";
     $result=mysqli_query($conn,$sql);
     if (mysqli_num_rows($result)==0){
-        $sql="INSERT INTO `users`(`username`,`password`) VALUES ('".$username."','".$password."')";
+        $sql="INSERT INTO  `users` (`username`,`password`,`teljesnev`,`lakcim`,`email`) VALUES ('".$username."','".$password."','','','')";
         $result=mysqli_query($conn,$sql);
         $_SESSION['register_error']="sikeres regisztracio. Most mar belephetsz";
 
