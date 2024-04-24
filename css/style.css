@@ -243,12 +243,12 @@ a {
     text-align: center;
 }
 .content_section{
-    width: 90%;
-    margin: auto;
+    width: 100%;
     height: fit-content;
 
 }
 .content_image{
+    margin: 5px;
     width: 350px;
     height: 350px;
     border-radius: 50%;
@@ -277,7 +277,6 @@ a {
 
 
 .content_text_center{
-    width: 800px;
     font-style: italic;
     font-size: 25px;
     margin: auto;

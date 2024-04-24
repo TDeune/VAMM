@@ -34,9 +34,10 @@ if (isset($_SESSION['username'])) {
         // Retrieve email and comment from form
         $username = $_SESSION["username"];
         $comment = $_POST["comment"];
+        $creatat = date("Y/m/d");
 
         // Prepare SQL statement to insert comment into database
-        $sql = "INSERT INTO comments (username, comment, szekcio) VALUES ('$username', '$comment', '$szekcio')";
+        $sql = "INSERT INTO comments (username, comment, created_at, szekcio) VALUES ('$username', '$comment', '$creatat','$szekcio')";
 
         if ($conn->query($sql) === TRUE) {
             // Redirect back to the index page
